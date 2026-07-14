@@ -1,5 +1,10 @@
 # 🚚 LogiRoute Microservices
 
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
+
 > Ecossistema de microserviços de alta performance para controle de logística, frotas e entregas.
 > Arquitetura orientada a domínios usando **Arquitetura Hexagonal**, segurança stateless baseada em **JWT** e controle de acesso granular baseado em perfis (**RBAC**).
 
@@ -55,10 +60,7 @@ O filtro de segurança descriptografa o payload do JWT e valida as seguintes reg
 
 ## 📦 Estrutura de Diretórios de um Microserviço
 
-![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
-![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
-![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
-![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
+
 
 
 
@@ -79,8 +81,4 @@ Cada módulo/microserviço segue a risca a divisão de camadas da Arquitetura He
     └── out/
         └── persistence/     # Repositories JPA, Entidades de banco de dados e Mappers (MapStruct)
 
-```markdown
-![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
-![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
-![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
-![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
+
