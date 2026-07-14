@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  # 1. Serviço do Banco de Dados MySQL
+  db:
+    image: mysql:8.0
+    container_name: mysql-logfel
+    restart: always
+    environment:
+      MYSQL_DATABASE: logfel
+      MYSQL_ROOT_PASSWORD: aluno1234  # Senha do usuário root do banco
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_logfel_data:/var/lib/mysql
+    networks:
+      - logfel-network
+
+  # 2. Serviço da sua API Spring Boot (LogFel)
+  api:
+    build: .  # Diz ao Docker para procurar o 'Dockerfile' que você criou na raiz
+    container_name: api-logfel
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+      # Como os containers estão na mesma rede Docker, a API conecta no host 'db' (e não no 'localhost')
+      BD_CONEXAO: "jdbc:mysql://db:3306/logfel?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true"
+      DB_USERNAME: "root"
+      DB_PASSWORD: "aluno1234"
+    depends_on:
+      - db    # Garante que o banco subirá antes da API tentar se conectar
+    networks:
+      - logfel-network
+
+volumes:
+  mysql_logfel_data:  # Cria um volume para persistir seus dados do banco (não apaga os dados ao desligar o container)
+
+networks:
+  logfel-network:     # Rede interna para os dois containers conversarem de forma segura
+    driver: bridge
