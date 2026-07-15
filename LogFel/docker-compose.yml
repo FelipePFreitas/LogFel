@@ -10,7 +10,7 @@ services:
       MYSQL_DATABASE: logfel
       MYSQL_ROOT_PASSWORD: aluno1234  # Senha do usuário root do banco
     ports:
-      - "3307:3306"
+      - "3306:3306"
     volumes:
       - mysql_logfel_data:/var/lib/mysql
     networks:
