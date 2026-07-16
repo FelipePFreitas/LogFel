@@ -34,7 +34,6 @@ public class PedidoEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "fk_id_cliente", nullable = false)
     private ClienteEntity cliente;
-
     // Relacionamento: O veículo que está fazendo esta entrega (pode ser nulo até ser despachado)
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "fk_id_veiculo")
