@@ -1,4 +1,4 @@
-package br.com.felipefreitas.LogFel.domain.ports.output;
+package br.com.felipefreitas.LogFel.domain.ports.output.cargo;
 
 import br.com.felipefreitas.LogFel.domain.model.Cargo;
 

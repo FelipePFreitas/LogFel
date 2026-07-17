@@ -1,7 +1,7 @@
 package br.com.felipefreitas.LogFel.infra.adapters.output.database.adapter;
 
 import br.com.felipefreitas.LogFel.domain.model.Cargo;
-import br.com.felipefreitas.LogFel.domain.ports.output.CargoRepositoryPort;
+import br.com.felipefreitas.LogFel.domain.ports.output.cargo.CargoRepositoryPort;
 import br.com.felipefreitas.LogFel.infra.adapters.output.database.entity.CargoEntity;
 import br.com.felipefreitas.LogFel.infra.adapters.output.database.mapper.CargoMapper;
 import br.com.felipefreitas.LogFel.infra.adapters.output.database.repository.CargoRepository;
@@ -25,8 +25,6 @@ public class CargoRepositoryAdapter implements CargoRepositoryPort {
         return cargoMapper.toDomain(salvaEntity);
     }
 
-
-
     @Override
     public Optional<Cargo> buscarCargoPorId(Long id) {
         return cargoRepository.findById(id)
@@ -43,6 +41,6 @@ public class CargoRepositoryAdapter implements CargoRepositoryPort {
 
     @Override
     public Optional<Cargo> buscarCargosPorNome(String cargo) {
-        return cargoRepository.findByCargoPorNome(cargo).map(cargoMapper::toDomain);
+        return cargoRepository.findByCargoIgnoreCase(cargo).map(cargoMapper::toDomain);
     }
 }

@@ -1,6 +1,6 @@
 package br.com.felipefreitas.LogFel.infra.config;
 
-import br.com.felipefreitas.LogFel.domain.ports.output.CargoRepositoryPort;
+import br.com.felipefreitas.LogFel.domain.ports.output.cargo.CargoRepositoryPort;
 import br.com.felipefreitas.LogFel.domain.service.CargoService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
