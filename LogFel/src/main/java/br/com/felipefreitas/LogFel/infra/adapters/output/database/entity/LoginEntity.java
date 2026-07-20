@@ -25,6 +25,6 @@ public class LoginEntity {
     @OneToOne(fetch = FetchType.LAZY,cascade = CascadeType.ALL) // adicionei o carregamento preguiçoso (lazy) no relacionamento. Isso evita que
     // o JPA faça um JOIN desnecessário buscando o usuário no banco toda vez que você só precisar validar o e-mail e a senha do login
     @JoinColumn(name = "fk_id_usuario", nullable = false)
-    private FuncionarioEntity funcionarioEntity;
+    private FuncionarioEntity funcionario;
 
 }

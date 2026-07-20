@@ -7,12 +7,12 @@ import java.util.Optional;
 
 public interface CargoRepositoryPort {
 
-    Cargo salvar(Cargo cargo);
+    Cargo save(Cargo cargo);
 
-    Optional<Cargo> buscarCargoPorId(Long id);
+    Optional<Cargo> findById(Long id);
 
-    List<Cargo> buscarTodosCargos();
+    List<Cargo> findAll();
 
-    Optional<Cargo> buscarCargosPorNome(String cargo);
+    Optional<Cargo> findByName(String cargo);
 
 }

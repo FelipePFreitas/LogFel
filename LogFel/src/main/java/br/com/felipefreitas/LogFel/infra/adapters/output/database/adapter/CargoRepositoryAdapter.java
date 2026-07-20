@@ -19,20 +19,20 @@ public class CargoRepositoryAdapter implements CargoRepositoryPort {
     private final CargoMapper cargoMapper;
 
     @Override
-    public Cargo salvar(Cargo cargo) {
+    public Cargo save(Cargo cargo) {
         CargoEntity entity = cargoMapper.toEntity(cargo);
         CargoEntity salvaEntity = cargoRepository.save(entity);
         return cargoMapper.toDomain(salvaEntity);
     }
 
     @Override
-    public Optional<Cargo> buscarCargoPorId(Long id) {
+    public Optional<Cargo> findById(Long id) {
         return cargoRepository.findById(id)
                 .map(cargoMapper::toDomain);
     }
 
     @Override
-    public List<Cargo> buscarTodosCargos() {
+    public List<Cargo> findAll() {
         return cargoRepository.findAll()
                 .stream()
                 .map(cargoMapper::toDomain)
@@ -40,7 +40,7 @@ public class CargoRepositoryAdapter implements CargoRepositoryPort {
     }
 
     @Override
-    public Optional<Cargo> buscarCargosPorNome(String cargo) {
+    public Optional<Cargo> findByName(String cargo) {
         return cargoRepository.findByCargoIgnoreCase(cargo).map(cargoMapper::toDomain);
     }
 }

@@ -15,9 +15,9 @@ public class PedidoItem {
 
     private Long id;
 
-    private PedidoEntity pedido;
+    private Pedido pedido;
 
-    private ProdutoEntity produto;
+    private Produto produto;
 
     private Integer quantidade;
 }

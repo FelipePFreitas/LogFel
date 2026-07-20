@@ -2,8 +2,8 @@ package br.com.felipefreitas.LogFel.infra.adapters.input.rest.controller;
 
 import br.com.felipefreitas.LogFel.domain.model.Cargo;
 import br.com.felipefreitas.LogFel.domain.service.CargoService;
-import br.com.felipefreitas.LogFel.infra.adapters.input.rest.dto.CargoRequestDTO;
-import br.com.felipefreitas.LogFel.infra.adapters.input.rest.dto.CargoResponseDTO;
+import br.com.felipefreitas.LogFel.infra.adapters.input.rest.dto.cargo.CargoRequestDTO;
+import br.com.felipefreitas.LogFel.infra.adapters.input.rest.dto.cargo.CargoResponseDTO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;

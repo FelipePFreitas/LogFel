@@ -1,8 +1,6 @@
 package br.com.felipefreitas.LogFel.domain.model;
 
 
-import br.com.felipefreitas.LogFel.infra.adapters.output.database.entity.CargoEntity;
-import br.com.felipefreitas.LogFel.infra.adapters.output.database.entity.RoleEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,7 +16,11 @@ public class Funcionario {
 
     private String nome;
 
+    private String cpf;
+
     private String email;
+
+    private String senha;
 
     private String endereco;
 
@@ -32,7 +34,7 @@ public class Funcionario {
 
     private String estado;
 
-    private RoleEntity roleEntity;
+    private Role role;
 
-    private CargoEntity cargo;
+    private Cargo cargo;
 }

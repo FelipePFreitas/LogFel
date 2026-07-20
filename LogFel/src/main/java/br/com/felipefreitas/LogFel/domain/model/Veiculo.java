@@ -22,6 +22,6 @@ public class Veiculo {
 
     private boolean sendoUsado = false;
 
-    private FuncionarioEntity funcionarioEntity;
+    private Funcionario funcionario;
 
 }

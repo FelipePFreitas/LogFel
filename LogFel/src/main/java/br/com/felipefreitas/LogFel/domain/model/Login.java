@@ -1,6 +1,5 @@
 package br.com.felipefreitas.LogFel.domain.model;
 
-import br.com.felipefreitas.LogFel.infra.adapters.output.database.entity.FuncionarioEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,6 +17,6 @@ public class Login {
 
     private String password;
 
-    private FuncionarioEntity funcionarioEntity;
+    private Funcionario funcionario;
 
 }

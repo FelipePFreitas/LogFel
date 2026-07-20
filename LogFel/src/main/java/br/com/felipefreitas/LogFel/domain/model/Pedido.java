@@ -3,7 +3,6 @@ package br.com.felipefreitas.LogFel.domain.model;
 import br.com.felipefreitas.LogFel.infra.adapters.output.database.entity.ClienteEntity;
 import br.com.felipefreitas.LogFel.infra.adapters.output.database.entity.FuncionarioEntity;
 import br.com.felipefreitas.LogFel.infra.adapters.output.database.entity.PedidoItemEntity;
-import br.com.felipefreitas.LogFel.infra.adapters.output.database.entity.VeiculoEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -25,13 +24,13 @@ public class Pedido {
 
     private String status; // Ex: 'AGUARDANDO_ENVIO', 'EM_TRANSITO', 'ENTREGUE'
 
-    private FuncionarioEntity vendedor;
+    private Funcionario vendedor;
 
     private ClienteEntity cliente;
 
-    private VeiculoEntity veiculo;
+    private Veiculo veiculo;
 
-    private FuncionarioEntity motorista;
+    private Funcionario motorista;
 
-    private List<PedidoItemEntity> itens = new ArrayList<>();
+    private List<PedidoItem> itens = new ArrayList<>();
 }

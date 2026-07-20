@@ -1,4 +1,4 @@
-package br.com.felipefreitas.LogFel.infra.adapters.input.rest.dto;
+package br.com.felipefreitas.LogFel.infra.adapters.input.rest.dto.cargo;
 
 import lombok.Builder;
 

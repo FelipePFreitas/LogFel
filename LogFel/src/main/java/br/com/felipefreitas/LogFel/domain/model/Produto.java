@@ -26,5 +26,5 @@ public class Produto {
 
     private Integer quantidadeEstoque;
 
-    private FornecedorEntity fornecedor;
+    private Fornecedor fornecedor;
 }
