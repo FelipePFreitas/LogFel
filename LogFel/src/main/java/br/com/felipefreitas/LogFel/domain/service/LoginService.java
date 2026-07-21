@@ -16,7 +16,6 @@ import lombok.AllArgsConstructor;
 public class LoginService implements CreateLoginUseCase, DeleteLoginUseCase, UpdatePasswordLoginUseCase {
 
     private final LoginRepositoryPort loginRepositoryPort;
-    private final FuncionarioRepositoryPort funcionarioRepositoryPort;
 
 
     @Override
